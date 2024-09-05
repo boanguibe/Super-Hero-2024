@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperHero</title>
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Vincular Bootstrap para los estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/img/sh2.jpg" alt="Logo" width="50" height="50" class="d-inline-block">
+                <span class="fs-5 ms-2">SuperHero</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sección principal con el formulario de búsqueda -->
+    <main class="container mt-2">
+        <div class="row">
+            <div class="col-5">
+                <div class="row">
+                    <h1 class="text-center">Encuentra tu SuperHero</h1>
+                    <section class="col">
+                        <div class="container d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/img/sh1.jpg" alt="" class="mb-3" width="250" height="180">
+                        </div>
+                    </section>
+                    <section class="col mt-2 d-flex justify-content-center">
+                        <form id="heroForm">
+                            <div class="form-group">
+                                <label for="heroId">Ingresa el número del superHero a buscar:</label>
+                                <input type="text" id="heroId" class="form-control mt-3" placeholder="Ej. 213">
+                            </div>
+                            <button type="submit" class="btn btn-danger text-warning w-bold mt-3">Buscar Héroe</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+            <div class="col-7">
+                <!-- Sección donde se mostrará la información del superhéroe -->
+                <section id="heroInfo" class="col mt-2">
+                    <!-- Aquí se insertará dinámicamente la información del superhéroe -->
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer de la página -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>SuperHero © 2024</p>
+    </footer>
+
+    <!-- Vincular jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script> <!-- Archivo JavaScript donde manejaremos la lógica -->
+
+</body>
+
+</html>
