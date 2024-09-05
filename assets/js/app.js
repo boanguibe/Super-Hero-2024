@@ -41,7 +41,7 @@ function mostrarHeroe(data) {
     let layout = `
     <div class="row">
         <!-- Columna izquierda para la card -->
-        <div class="col-8 mb-4">
+        <div class="col-md-8 mb-4">
             <div class="card text-bg-danger mb-3" style="max-width: 600px; border: 2px solid #ffc107; border-radius: 10px;">
                 <div class="row g-0">
                     <div class="col-md-4">
@@ -65,7 +65,7 @@ function mostrarHeroe(data) {
         </div>
 
         <!-- Columna derecha para el gráfico -->
-        <div class="col-4 mb-4">
+        <div class="col-md-4 mb-4">
             <div id="powerStatsChart" style="height: 370px; width: 100%;"></div>
         </div>
     </div>
