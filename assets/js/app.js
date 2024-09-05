@@ -27,7 +27,7 @@ function buscarHeroe(id) {
             mostrarHeroe(data);
         },
         error: function () {
-            alert("Hubo un error al realizar la búsqueda. Por favor, intenta nuevamente.");
+            alert("Hubo un error al realizar la búsqueda. Por favor, intenta nuevamente");
         }
     });
 }
