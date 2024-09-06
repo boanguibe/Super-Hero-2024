@@ -34,30 +34,27 @@ function buscarHeroe(id) {
 
 //4. Renderización de la Información del Héroe
 function mostrarHeroe(data) {
-    // Limpiar la sección de información del héroe antes de agregar nuevo contenido
     $('#heroInfo').empty();
 
-    // Crear el layout de las dos columnas
     let layout = `
     <div class="row">
         <!-- Columna izquierda para la card -->
-        <div class="col-md-8 mb-4">
-            <div class="card text-bg-danger mb-3" style="max-width: 600px; border: 2px solid #ffc107; border-radius: 10px;">
+        <div class="col-12 col-md-8 my-1 mb-4">
+            <div class="card text-bg-danger mb-3" style="border: 2px solid #ffc107; border-radius: 10px;">
                 <div class="row g-0">
-                    <div class="col-md-4">
+                    <div class="col-12 col-lg-4">
                         <img src="${data.image.url}" class="img-fluid rounded-start" alt="...">
                     </div>
-                    <div class="col-md-8">
-                        <!-- Aplicamos el scroll con un estilo que armoniza con los colores -->
+                    <div class="col-12 col-lg-8">
                         <div class="card-body" style="max-height: 450px; overflow-y: auto; border-left: 2px solid #ffc107;">
                             <h5 class="card-title text-warning">Nombre: ${data.name}</h5>
-                            <p class="card-text text-warning"><strong class="fs-6">Conexiones:</strong> ${data.connections['group-affiliation']}</p>
-                            <p class="card-text"><strong class="fs-6">Publicado por:</strong> ${data.biography.publisher}</p>
-                            <p class="card-text"><strong class="fs-6">Ocupación:</strong> ${data.work.occupation}</p>
-                            <p class="card-text"><strong class="fs-6">Primera aparición:</strong> ${data.biography['first-appearance']}</p>
-                            <p class="card-text"><strong class="fs-6">Altura:</strong> ${data.appearance.height.join(", ")}</p>
-                            <p class="card-text"><strong class="fs-6">Peso:</strong> ${data.appearance.weight.join(", ")}</p>
-                            <p class="card-text"><strong class="fs-6">Alianzas:</strong> ${data.biography.aliases.join(", ")}</p>
+                            <p class="card-text text-warning"><strong>Conexiones:</strong> ${data.connections['group-affiliation']}</p>
+                            <p class="card-text"><strong>Publicado por:</strong> ${data.biography.publisher}</p>
+                            <p class="card-text"><strong>Ocupación:</strong> ${data.work.occupation}</p>
+                            <p class="card-text"><strong>Primera aparición:</strong> ${data.biography['first-appearance']}</p>
+                            <p class="card-text"><strong>Altura:</strong> ${data.appearance.height.join(", ")}</p>
+                            <p class="card-text"><strong>Peso:</strong> ${data.appearance.weight.join(", ")}</p>
+                            <p class="card-text"><strong>Alianzas:</strong> ${data.biography.aliases.join(", ")}</p>
                         </div>
                     </div>
                 </div>
@@ -65,17 +62,14 @@ function mostrarHeroe(data) {
         </div>
 
         <!-- Columna derecha para el gráfico -->
-        <div class="col-md-4 mb-4">
+        <div class="col-12 col-md-4 mb-4">
             <div id="powerStatsChart" style="height: 370px; width: 100%;"></div>
         </div>
     </div>
-`;
+    `;
 
-
-    // Insertar el layout en la sección de heroInfo
     $('#heroInfo').append(layout);
 
-    // Crear el gráfico de torta con CanvasJS
     let chart = new CanvasJS.Chart("powerStatsChart", {
         animationEnabled: true,
         theme: "light2",
@@ -99,3 +93,4 @@ function mostrarHeroe(data) {
     });
     chart.render();
 }
+

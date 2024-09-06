@@ -23,30 +23,24 @@
     </nav>
 
     <!-- Sección principal con el formulario de búsqueda -->
-    <main class="container mt-2">
+    <main class="container-fluid mt-2 px-5">
         <div class="row">
-            <div class="col-md-5">
-                <div class="row">
-                    <h1 class="text-center">Encuentra tu SuperHero</h1>
-                    <section class="col-md-6">
-                        <div class="container d-flex flex-column justify-content-center align-items-center">
-                            <img src="assets/img/sh1.jpg" alt="" class="mb-3" width="250" height="180">
+            <div class="col-12 col-md-4 m-0 mb-4">
+                <h1 class="text-center">Encuentra tu SuperHero</h1>
+                <div class="container d-flex flex-column justify-content-center align-items-center">
+                    <img src="assets/img/sh1.jpg" alt="" class="mb-3 img-fluid" width="250" height="180">
+                    <form id="heroForm" class="mt-3">
+                        <div class="form-group">
+                            <label for="heroId">Ingresa el número del superHero a buscar:</label>
+                            <input type="text" id="heroId" class="form-control mt-3" placeholder="Ej. 213">
                         </div>
-                    </section>
-                    <section class="col-md-6 mt-2 d-flex justify-content-center">
-                        <form id="heroForm">
-                            <div class="form-group">
-                                <label for="heroId">Ingresa el número del superHero a buscar:</label>
-                                <input type="text" id="heroId" class="form-control mt-3" placeholder="Ej. 213">
-                            </div>
-                            <button type="submit" class="btn btn-danger text-warning w-bold mt-3">Buscar Héroe</button>
-                        </form>
-                    </section>
+                        <button type="submit" class="btn btn-danger text-warning fw-bold mt-3 w-100">Buscar Héroe</button>
+                    </form>
                 </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-12 col-md-8 m-0">
                 <!-- Sección donde se mostrará la información del superhéroe -->
-                <section id="heroInfo" class="col mt-2 ">
+                <section id="heroInfo" class="col mt-2">
                     <!-- Aquí se insertará dinámicamente la información del superhéroe -->
                 </section>
             </div>
